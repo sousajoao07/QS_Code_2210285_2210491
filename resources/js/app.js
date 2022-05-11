@@ -42,6 +42,10 @@ const addCategory = Vue.component('addCategory', AddCategory);
 import EditCategory from "./components/view/editCategory.vue";
 const editCategory = Vue.component('editCategory', EditCategory);
 
+////////////////////////////---- Products ----/////////////////////////////////
+import ProductsList from "./components/view/productsList.vue";
+const productsList = Vue.component('productsList', ProductsList);
+
 ///////////////////////////----- Home -----///////////////////////////////////
 import Home from "./components/view/home.vue";
 const home = Vue.component('home', Home);
