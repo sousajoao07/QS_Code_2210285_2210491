@@ -11,7 +11,7 @@ class Category extends Model
 
     protected $hidden = ['foto'];
 
-    public function products(){
-        return $this->hasMany('App\Product');
-    }
+    // public function products(){
+    //     return $this->hasMany('App\Product');
+    // }
 }

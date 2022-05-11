@@ -55,6 +55,9 @@ const login = Vue.component('login', Login);
 import Navbar from "./components/navbar.vue";
 Vue.component('navbar', Navbar);
 
+import Products from "./components/view/products.vue";
+const products = Vue.component('list', Products);
+
 
 /* import router from './router/index.js'; */
 
