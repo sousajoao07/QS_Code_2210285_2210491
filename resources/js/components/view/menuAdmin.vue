@@ -15,7 +15,7 @@
                     <b-list-group-item v-if="isOperator" variant="danger">Utilizadores - Não tem permissões para aceder a esta opção.</b-list-group-item>
                     <b-list-group-item v-if="isAdmin" @click.prevent="users"  button>Utilizadores</b-list-group-item>
                     <b-list-group-item @click.prevent="categories"  button>Categorias</b-list-group-item>
-                    <b-list-group-item button>Produtos</b-list-group-item>
+                    <b-list-group-item @click.prevent="products" button>Produtos</b-list-group-item>
                     </b-list-group>
 
                     

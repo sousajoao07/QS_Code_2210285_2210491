@@ -112,8 +112,6 @@ const routes = [
       meta: {
          forAdminAndOperator:true
       }
-      
-      
    },
    {
       path:"/edit-category",
@@ -122,8 +120,15 @@ const routes = [
       meta: {
          forAdminAndOperator:true
       }
-      
-      
+   },
+
+   {
+      path:"/products-list",
+      name: "productsList",
+      component: productsList,
+      meta: {
+         forAdminAndOperator:true
+      }
    },
    
    {
