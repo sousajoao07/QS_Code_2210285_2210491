@@ -3,8 +3,7 @@ pipeline{
     stages {
         stage('Build/Deploy app to staging') {
             steps {
-                // One or more steps need to be included within the steps 
-block.
+                
                 echo 'Building/Deploying app to staging'
             }
         }
