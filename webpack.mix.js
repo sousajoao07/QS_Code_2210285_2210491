@@ -19,7 +19,9 @@ const mix = require('laravel-mix');
 //     .postCss('resources/assets/css/styles.css', 'public/css')
 //     .sass('resources/sass/app.scss', 'public/css');
 
-mix.setPublicPath('dist')
+mix
+    .disableNotifications()
+    .setPublicPath('dist')
     .js('resources/js/app.js', 'public/js')
     .js('resources/js/bootstrap', 'public/js')
     .js('resources/assets/js/scripts.js', 'public/js')
