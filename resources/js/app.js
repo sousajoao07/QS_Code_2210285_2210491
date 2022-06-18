@@ -42,6 +42,10 @@ const addCategory = Vue.component('addCategory', AddCategory);
 import EditCategory from "./components/view/editCategory.vue";
 const editCategory = Vue.component('editCategory', EditCategory);
 
+////////////////////////////---- Products ----/////////////////////////////////
+import ProductsList from "./components/view/productsList.vue";
+const productsList = Vue.component('productsList', ProductsList);
+
 ///////////////////////////----- Home -----///////////////////////////////////
 import Home from "./components/view/home.vue";
 const home = Vue.component('home', Home);
@@ -54,6 +58,9 @@ const login = Vue.component('login', Login);
 
 import Navbar from "./components/navbar.vue";
 Vue.component('navbar', Navbar);
+
+import Products from "./components/view/products.vue";
+const products = Vue.component('list', Products);
 
 
 /* import router from './router/index.js'; */
@@ -105,8 +112,6 @@ const routes = [
       meta: {
          forAdminAndOperator:true
       }
-      
-      
    },
    {
       path:"/edit-category",
@@ -115,8 +120,15 @@ const routes = [
       meta: {
          forAdminAndOperator:true
       }
-      
-      
+   },
+
+   {
+      path:"/products-list",
+      name: "productsList",
+      component: productsList,
+      meta: {
+         forAdminAndOperator:true
+      }
    },
    
    {

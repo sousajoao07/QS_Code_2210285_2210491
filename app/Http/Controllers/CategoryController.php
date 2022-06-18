@@ -25,7 +25,7 @@ class CategoryController extends Controller
     }
 
     public function delete(Request $request, $id){
-        $path=storage_path('app/public/fotos/').$request['image'];
+        $path=storage_path('app/public/').$request['image'];
         unlink($path);
 
         
@@ -55,7 +55,7 @@ class CategoryController extends Controller
             }
             $fileName= Str::random().'.'.$extension;
 
-            $path=storage_path('app/public/fotos/').$fileName;
+            $path=storage_path('app/public/').$fileName;
             file_put_contents($path,$decoded);
 
             $category->image=$fileName;
@@ -88,7 +88,7 @@ class CategoryController extends Controller
             }
             $fileName= Str::random().'.'.$extension;
 
-            $path=storage_path('app/public/fotos/').$fileName;
+            $path=storage_path('app/public/').$fileName;
             file_put_contents($path,$decoded);
 
             $category->image=$fileName;
