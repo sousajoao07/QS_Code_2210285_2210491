@@ -16,3 +16,5 @@ mix
     .js('resources/assets/js/scripts.js', 'public/js')
     .postCss('resources/assets/css/styles.css', 'public/css')
     .sass('resources/sass/app.scss', 'public/css')
+
+    
