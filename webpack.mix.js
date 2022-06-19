@@ -26,4 +26,3 @@ mix
     // .copy('resources/views/login.blade.php', 'dist/public')
     // .copy('routes/api.php', 'dist/public')
     // .copy('public/images/', 'dist/public/images')
-
