@@ -16,7 +16,6 @@ const mix = require('laravel-mix');
 //     .js('resources/assets/js/scripts.js', 'public/js')
 //     .postCss('resources/assets/css/styles.css', 'public/css')
 //     .sass('resources/sass/app.scss', 'public/css');
-
 mix
     .js('resources/js/app.js', 'public/js')
     //.js('resources/js/bootstrap', 'public/js')
@@ -27,3 +26,4 @@ mix
     // .copy('resources/views/login.blade.php', 'dist/public')
     // .copy('routes/api.php', 'dist/public')
     // .copy('public/images/', 'dist/public/images')
+
