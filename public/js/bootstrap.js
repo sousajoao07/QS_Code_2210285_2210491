@@ -19683,13 +19683,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 1:
-/*!*****************************************!*\
-  !*** multi ./resources/js/bootstrap.js ***!
-  \*****************************************/
+/*!**************************************!*\
+  !*** multi ./resources/js/bootstrap ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/joaosousa/Desktop/QS/FrutosOesteWebDevelopment/resources/js/bootstrap.js */"./resources/js/bootstrap.js");
+module.exports = __webpack_require__(/*! /Users/joaosousa/Desktop/QS/QS_Code_2210285_2210491/resources/js/bootstrap */"./resources/js/bootstrap.js");
 
 
 /***/ })

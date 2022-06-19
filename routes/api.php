@@ -31,14 +31,12 @@ Route::group([
       'middleware' => 'auth:api'
     ], function() {
         Route::get('logout', 'AuthController@logout');
-        Route::get('user', 'AuthController@user');
-        
+        Route::get('user', 'AuthController@user');       
     });
-
-    
 });
 ////////////////////TEST/////////////////////////////////////////////
 Route::post('test','UserController@test');
+Route::get('testOla','CategoryController@test');
 
 /////////////////////USERS////////////////////////////////////////////
 Route::get('users','UserController@index');

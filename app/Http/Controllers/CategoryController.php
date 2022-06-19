@@ -98,4 +98,11 @@ class CategoryController extends Controller
         return (new CategoryResource($category))->response()->setStatusCode(200);
     }
 
+    public function test(Request $request)
+    {
+        return response()->json([
+            'teste' => 'Hello From Api'
+        ]);
+    }
+
 }
