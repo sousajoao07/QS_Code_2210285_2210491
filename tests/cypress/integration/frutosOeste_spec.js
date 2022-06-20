@@ -18,7 +18,6 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .next()
             .click()
-
     })
 
     it('Add Category', () => {
