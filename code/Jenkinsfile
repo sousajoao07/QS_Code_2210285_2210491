@@ -39,7 +39,7 @@ pipeline{
         }
         stage('Run automated tests') {
              steps {
-                dir('~/testsCypress') {
+                ws('~/testsCypress') {
                     sh 'npm prune'
                     sh 'npm cache clean --force'
                     sh 'npm i'
