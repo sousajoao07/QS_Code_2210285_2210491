@@ -3,7 +3,7 @@
 describe('FRUTOS OESTE TESTING', () => {
     const filepath = 'images/biologicos.jpg'
     beforeEach(() => {
-        cy.visit()
+        cy.visit('http://34.140.46.213/admin')
         cy.get('.login-form .div')
             .first()
             .type('admin@email.pt')
