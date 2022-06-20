@@ -1,11 +1,5 @@
 pipeline{
-    agent {
-        node {
-        label 'my-defined-label'
-        customWorkspace '/testsCypress'
-        }
-    }
-
+    agent any
     tools {nodejs "NodeJS"}
 
     parameters{
@@ -43,7 +37,10 @@ pipeline{
             }
         }
         stage('Run automated tests') {
-             steps {
+            ws("/testsCypress") {
+                echo "awesome commands here instead of echo"
+            }
+            steps {
                 sh 'npm prune'
                 sh 'npm cache clean --force'
                 sh 'npm i'
