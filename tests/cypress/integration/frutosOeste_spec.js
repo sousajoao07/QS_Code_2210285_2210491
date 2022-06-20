@@ -15,7 +15,8 @@ describe('FRUTOS OESTE TESTING', () => {
             .click()       
         
         cy.get('.list-group-item')
-            .last()
+            .first()
+            .next()
             .click()
 
     })
