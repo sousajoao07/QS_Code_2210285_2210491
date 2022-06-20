@@ -1,10 +1,5 @@
 pipeline{
-    agent {
-        any
-        node {
-            customWorkspace '/testsCypress'
-        }
-    }
+    agent any
 
     tools {nodejs "NodeJS"}
 
@@ -44,6 +39,8 @@ pipeline{
         }
         stage('Run automated tests') {
              steps {
+                sh "cd "
+                sh 'cd testsCypress' 
                 sh 'npm prune'
                 sh 'npm cache clean --force'
                 sh 'npm i'
