@@ -2,6 +2,7 @@
 
 describe('FRUTOS OESTE TESTING', () => {
     const filepath = 'images/biologicos.jpg'
+
     beforeEach(() => {
         cy.visit('http://34.140.46.213/admin')
         cy.wait(500)
@@ -34,6 +35,9 @@ describe('FRUTOS OESTE TESTING', () => {
             .get('.form-group .btn')
             .first()
             .click()
+
+        cy.get('.table', { timeout: 10000 })
+            .should('be.visible')
 
         cy.get('.table>tbody')
             .should('have.length', 7)
