@@ -7,7 +7,7 @@
     "chromeWebSecurity": false,
     "reporter": "mochawesome",
     "reporterOptions": {
-      "reportDir": "cypress/mochawesome-report",	
+      "reportDir": "tests/cypress/mochawesome-report",	
       "overwrite": false,
       "html": true,
       "json": true
