@@ -43,10 +43,10 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .click()
 
-        cy.wait('@dataGetFirst').its('response.statusCode').should('equal', 200)
+        // cy.wait('@dataGetFirst').its('response.statusCode').should('equal', 200)
 
-        cy.get('.table>tbody')
-            .should('have.length', 7)
+        // cy.get('.table>tbody')
+        //     .should('have.length', 7)
 
         //logout para iniciar o próximo teste
         cy.get('.navbar-nav .nav-item')
