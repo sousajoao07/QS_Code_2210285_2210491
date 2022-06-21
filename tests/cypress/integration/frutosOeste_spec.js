@@ -48,7 +48,7 @@ describe('FRUTOS OESTE TESTING', () => {
 
     it('Remove Category', () => {
         cy.wait(5000)
-        cy.get('.table>tbody')
+        cy.get('.table-bordered > tbody')
         .should('have.length', 7)
         .eq(1)
         .should('contain','Bio')
@@ -57,7 +57,7 @@ describe('FRUTOS OESTE TESTING', () => {
             elem[0].children[0].firstChild.click()
         })
 
-        cy.get('.table>tbody')
+        cy.get('.table-bordered > tbody')
         .should('have.length', 6)
 
         cy.get('.navbar-nav .nav-item')
