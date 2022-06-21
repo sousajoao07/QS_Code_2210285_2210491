@@ -5,7 +5,7 @@ describe('FRUTOS OESTE TESTING', () => {
 
     beforeEach(() => {
         cy.visit('http://34.140.46.213/admin')
-        cy.wait(500)
+
         cy.get('.login-form .div')
             .first()
             .type('admin@email.pt')
@@ -22,12 +22,6 @@ describe('FRUTOS OESTE TESTING', () => {
     })
 
     it('Add Category', () => {
-        // Give an alias to request
-        cy.intercept({
-            method: 'GET',
-            url: 'http://34.140.46.213/api/categories',
-        }).as('dataGetFirst');
-        
 
         cy.get('.card-header .btn')
             .click()
@@ -42,8 +36,6 @@ describe('FRUTOS OESTE TESTING', () => {
             .get('.form-group .btn')
             .first()
             .click()
-
-        // cy.wait('@dataGetFirst').its('response.statusCode').should('equal', 200)
 
         // cy.get('.table>tbody')
         //     .should('have.length', 7)
