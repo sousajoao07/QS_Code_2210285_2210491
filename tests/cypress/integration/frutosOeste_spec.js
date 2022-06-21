@@ -37,10 +37,10 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('tbody')
             .should('have.length', 7)
 
-        // //logout para iniciar o próximo teste
-        // cy.get('.navbar-nav .nav-item')
-        // .eq(4)
-        // .click()  
+        //logout para iniciar o próximo teste
+        cy.get('.navbar-nav .nav-item')
+        .eq(4)
+        .click()  
 
     })
 
@@ -56,6 +56,9 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('tbody')
         .should('have.length', 6)
 
+        cy.get('.navbar-nav .nav-item')
+        .eq(4)
+        .click()  
         
     })
 })
