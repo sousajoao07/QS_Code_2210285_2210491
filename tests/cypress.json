@@ -6,7 +6,8 @@
     },
     "chromeWebSecurity": false,
     "reporter": "mochawesome",
-    "reporterOptions": {	
+    "reporterOptions": {
+      "quiet": true,	
       "overwrite": false,
       "html": false,
       "json": true
