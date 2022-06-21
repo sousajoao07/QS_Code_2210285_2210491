@@ -34,7 +34,7 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .click()
 
-        cy.get('table>tbody')
+        cy.get('tbody')
             .should('have.length', 7)
 
         //logout para iniciar o próximo teste
