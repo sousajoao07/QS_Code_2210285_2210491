@@ -4,12 +4,11 @@
     "Environments": {
       "L-Env": ""
     },
-    "chromeWebSecurity": false,
+
     "reporter": "mochawesome",
     "reporterOptions": {
       "quiet": true,	
-      "overwrite": false,
-      "html": false,
+      "overwrite": true,
       "json": true
     }
   }
