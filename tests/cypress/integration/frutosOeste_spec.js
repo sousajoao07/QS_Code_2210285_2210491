@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 describe('FRUTOS OESTE TESTING', () => {
-    const filepath = 'images/biologicos.jpg'
+    const filepath = 'images/aperitivos.png'
 
     beforeEach(() => {
         cy.visit('http://34.140.46.213/admin')
