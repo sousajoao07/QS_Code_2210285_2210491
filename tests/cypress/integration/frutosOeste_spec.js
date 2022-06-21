@@ -44,10 +44,10 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.navbar-nav .nav-item')
         .eq(4)
         .click()  
-
     })
 
     it('Remove Category', () => {
+        cy.wait(5000)
         cy.get('.table>tbody')
         .should('have.length', 7)
         .eq(1)
