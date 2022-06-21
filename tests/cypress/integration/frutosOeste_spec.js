@@ -34,8 +34,7 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .click()
 
-        cy.get('tbody')
-            .wait(500)
+        cy.get('table>tbody')
             .should('have.length', 7)
 
         //logout para iniciar o próximo teste
@@ -47,7 +46,6 @@ describe('FRUTOS OESTE TESTING', () => {
 
     it('Remove Category', () => {
         cy.get('table>tbody')
-        .wait(500)
         .should('have.length', 7)
         .eq(1)
         .should('contain','Bio')
