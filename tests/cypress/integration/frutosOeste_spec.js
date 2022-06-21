@@ -35,6 +35,8 @@ describe('FRUTOS OESTE TESTING', () => {
             .get('.form-group .btn')
             .first()
             .click()
+        
+        cy.url().should('contain', 'categories-list')
 
         cy.get('.table', { timeout: 10000 })
             .should('be.visible')
