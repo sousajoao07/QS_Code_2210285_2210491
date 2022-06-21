@@ -55,7 +55,7 @@ pipeline{
                             allowMissing: false,
                             alwaysLinkToLastBuild: true,
                             keepAll: true,
-                            reportDir: 'mochawesome-report',
+                            reportDir: './mochawesome-report',
                             reportFiles: 'mochawesome.html',
                             reportName: 'My Reports',
                             reportTitles: 'The Report'])
