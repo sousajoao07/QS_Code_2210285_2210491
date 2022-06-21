@@ -22,6 +22,13 @@ describe('FRUTOS OESTE TESTING', () => {
     })
 
     it('Add Category', () => {
+        // Give an alias to request
+        cy.intercept({
+            method: 'GET',
+            url: 'http://34.140.46.213/api/categories',
+        }).as('dataGetFirst');
+        
+
         cy.get('.card-header .btn')
             .click()
 
@@ -36,7 +43,7 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .click()
 
-        cy.wait(5000)
+        cy.wait('@dataGetFirst').its('response.statusCode').should('equal', 200)
 
         cy.get('.table>tbody')
             .should('have.length', 7)
