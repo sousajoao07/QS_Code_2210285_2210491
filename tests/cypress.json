@@ -9,7 +9,7 @@
     "reporterOptions": {
       "reportDir": "tests/cypress/mochawesome-report",	
       "overwrite": false,
-      "html": true,
+      "html": false,
       "json": true
     }
   }
