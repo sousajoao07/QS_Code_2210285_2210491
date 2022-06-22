@@ -93,10 +93,10 @@ import { required } from 'vuelidate/lib/validators'
                     .then(response=>{
                         console.log(response);
                         this.$toasted.show("A categoria " + "'" + this.category.name +  "'" + " foi criada com sucesso!");
-                        setTimeout(() => {
-                                    this.$router.push("/categories-list");
-                                }, 1000); 
-                        
+                        // setTimeout(() => {
+                        //             
+                        //         }, 1000); 
+                        this.$router.push("/categories-list");
                         })
                         .catch(error=>{
                                 console.log(error);
