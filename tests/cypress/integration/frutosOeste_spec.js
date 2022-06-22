@@ -21,6 +21,7 @@ describe('FRUTOS OESTE TESTING', () => {
     })
 
     it('Add Category', () => {
+        
         cy.get('.card-header .btn')
             .click()
 
@@ -31,10 +32,13 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.form-control')
             .get('input[type="file"]')
             .attachFile(filepath)
-            .get('.form-group .btn')
+
+        cy.wait(3000)    
+
+        cy.get('.form-group .btn')
             .first()
             .click()
-        cy.wait(6000)
+
         cy.get('.table > tbody')
             .should('have.length', 7)
 
