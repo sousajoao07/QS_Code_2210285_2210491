@@ -3,7 +3,7 @@
             <section class="page-section" id="menu-admin">
                 <div class="container">
                     <!-- About Section Heading-->
-                    <h2 class="page-section-heading text-center text-secondary">Menu Administrador</h2>
+                    <h2 class="page-section-heading text-center text-secondary">Menu Administradors</h2>
                     <!-- Icon Divider-->
                     <div class="divider-custom">
                         <div class="divider-custom-line"></div>
@@ -37,16 +37,19 @@
             categories(){
             this.$router.push('categories-list');
             },
+            products(){
+            this.$router.push('products-list');    
+            },
             
-    },
-    computed:{
-        isOperator() {
-                return this.$store.getters.isOperator;
-            },
-        isAdmin() {
-                return this.$store.getters.isAdmin;
-            },
-    },
+        },
+        computed:{
+            isOperator() {
+                    return this.$store.getters.isOperator;
+                },
+            isAdmin() {
+                    return this.$store.getters.isAdmin;
+                },
+        },
     }
 </script>
 <style scoped>
