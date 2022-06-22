@@ -17,7 +17,7 @@ pipeline{
                                 cleanRemote: false, 
                                 excludes: 'node_modules/', 
                                 execCommand: '''
-                                cd /var/www/frutos
+                                cd /var/www/frutos/code
                                 npm install
                                 composer install
                                 npm run prod ''', 
@@ -79,7 +79,7 @@ pipeline{
                                 cleanRemote: false, 
                                 excludes: 'node_modules/', 
                                 execCommand: '''
-                                cd /var/www/frutos
+                                cd /var/www/frutos/code
                                 npm install
                                 composer install
                                 npm run prod ''', 
