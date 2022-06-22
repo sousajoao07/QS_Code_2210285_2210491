@@ -46,9 +46,6 @@ const editCategory = Vue.component('editCategory', EditCategory);
 import ProductsList from "./components/view/productsList.vue";
 const productsList = Vue.component('productsList', ProductsList);
 
-import AddProduct from "./components/view/addProduct.vue";
-const addProduct = Vue.component('addProduct', AddProduct);
-
 ///////////////////////////----- Home -----///////////////////////////////////
 import Home from "./components/view/home.vue";
 const home = Vue.component('home', Home);
@@ -133,16 +130,7 @@ const routes = [
          forAdminAndOperator:true
       }
    },
-   {
-      path:"/add-product",
-      name: "addProduct",
-      component: addProduct,
-      meta: {
-         forAdminAndOperator:true
-      }
-      
-      
-   },
+   
    {
       path:"/users-list",
       name: "usersList",
