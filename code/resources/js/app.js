@@ -20,7 +20,7 @@ Vue.use(Toasted,{
 
 ////////////////////////////---- Menu ----///////////////////////////////////
 import MenuAdmin from "./components/view/menuAdmin.vue";
-const menuAdmin = Vue.component('usersList', MenuAdmin);
+const menuAdmin = Vue.component('menuAdmin', MenuAdmin);
 
 ////////////////////////////---- Users ----///////////////////////////////////
 import UsersList from "./components/view/usersList.vue";
@@ -48,6 +48,7 @@ const productsList = Vue.component('productsList', ProductsList);
 
 import AddProduct from "./components/view/addProduct.vue";
 const addProduct = Vue.component('addProduct', AddProduct);
+
 
 
 ///////////////////////////----- Home -----///////////////////////////////////
@@ -124,16 +125,6 @@ const routes = [
       meta: {
          forAdminAndOperator:true
       }
-   },
-
-   {
-      path:"/products-list",
-      name: "productsList",
-      component: productsList,
-      meta: {
-         forAdminAndOperator:true
-      }
-     
    },
 
    {

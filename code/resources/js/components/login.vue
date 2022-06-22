@@ -63,7 +63,7 @@
                     
                     setTimeout(() => {
                                 window.location.href = `/`;
-                            }, 1000); 
+                            }, 3000); 
                     
                     })
                     .catch(error=>{
@@ -72,13 +72,17 @@
                             this.showMessage = true;
                             console.log(error);
                     })
-                    .then(response=>{
+                    .then(()=>{
                         axios.get('api/auth/user').then(response=>{
                             let user=response.data;
                             console.log(user);
                             this.$store.commit('setAuthUser',user);
                             console.log(this.$store.state.user);
-                        })
+                        }).catch(error=>{
+                            console.log(error)
+                        }
+
+                        )
                             
                     })
                 }else{
@@ -95,9 +99,7 @@
                     .then(response => {
                         console.log(response);
                         this.$store.commit('clearUserAndToken');
-                        setTimeout(() => {
-                                window.location.href = `/`;
-                            }, 1000); 
+                        window.location.href = `/`;
                     })
                     .catch(error => {
                         console.log(error);
