@@ -7,7 +7,7 @@ describe('FRUTOS OESTE TESTING', () => {
     //////////////////COMMON////////////////////
 
     beforeEach(() => {
-        cy.visit('http://frutosoeste.test/admin')
+        cy.visit('http://34.140.46.213/admin')
  
         cy.get('.login-form .div')
             .first()
