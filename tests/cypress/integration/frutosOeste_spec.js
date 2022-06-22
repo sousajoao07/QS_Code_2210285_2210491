@@ -34,7 +34,6 @@ describe('FRUTOS OESTE TESTING', () => {
             .get('.form-group .btn')
             .first()
             .click()
-            .wait(3000)
         
         cy.get('.table > tbody')
             .should('have.length', 7)
