@@ -5,7 +5,7 @@ describe('FRUTOS OESTE TESTING', () => {
 
     beforeEach(() => {
         cy.visit('http://34.140.46.213/admin')
-
+        cy.wait(3000)
         cy.get('.login-form .div')
             .first()
             .type('admin@email.pt')
@@ -19,6 +19,7 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.list-group-item')
             .eq(1)
             .click()
+        cy.wait(3000)
     })
 
     it('Add Category', () => {
@@ -37,7 +38,9 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .click()
 
-        cy.get('table > tbody')
+        cy.wait(5000)
+
+        cy.get('.table > tbody')
             .should('have.length', 7)
 
         //logout para iniciar o próximo teste
@@ -47,7 +50,8 @@ describe('FRUTOS OESTE TESTING', () => {
     })
 
     it('Remove Category', () => {
-        cy.get('table > tbody')
+        cy.wait(3000)
+        cy.get('.table > tbody')
             .should('have.length', 7)
             .eq(1)
             .should('contain','Bio')
@@ -55,7 +59,9 @@ describe('FRUTOS OESTE TESTING', () => {
             .then(elem => {elem[0].children[0].firstChild.click()
         })
 
-        cy.get('table > tbody')
+        cy.wait(3000)
+
+        cy.get('.table > tbody')
             .should('have.length', 6)
 
         cy.get('.navbar-nav .nav-item')
