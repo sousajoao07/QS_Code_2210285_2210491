@@ -21,7 +21,6 @@ describe('FRUTOS OESTE TESTING', () => {
     })
 
     it('Add Category', () => {
-        
         cy.get('.card-header .btn')
             .click()
 
@@ -45,8 +44,7 @@ describe('FRUTOS OESTE TESTING', () => {
         //logout para iniciar o próximo teste
         cy.get('.navbar-nav .nav-item')
         .eq(4)
-        .click()  
-
+        .click()
     })
 
     it('Remove Category', () => {
@@ -65,6 +63,5 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.navbar-nav .nav-item')
         .eq(4)
         .click()  
-        
     })
 })
