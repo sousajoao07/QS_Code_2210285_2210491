@@ -37,6 +37,10 @@
             categories(){
             this.$router.push('categories-list');
             },
+
+            products(){
+                this.$router.push('products-list')
+            }
             
     },
     computed:{

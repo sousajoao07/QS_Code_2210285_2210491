@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -161,14 +161,14 @@
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!**********************************************!*\
   !*** multi ./resources/assets/js/scripts.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/joaosousa/Desktop/QS/QS_Code_2210285_2210491/resources/assets/js/scripts.js */"./resources/assets/js/scripts.js");
+module.exports = __webpack_require__(/*! /Users/joaosousa/Desktop/QS/QS_Code_2210285_2210491/code/resources/assets/js/scripts.js */"./resources/assets/js/scripts.js");
 
 
 /***/ })
