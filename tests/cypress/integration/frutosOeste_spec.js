@@ -37,7 +37,7 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .click()
 
-        cy.get('[id="dataTable"] > tbody')
+        cy.get('table > tbody')
             .should('have.length', 7)
 
         //logout para iniciar o próximo teste
@@ -47,7 +47,7 @@ describe('FRUTOS OESTE TESTING', () => {
     })
 
     it('Remove Category', () => {
-        cy.get('[id="dataTable"] > tbody')
+        cy.get('table > tbody')
             .should('have.length', 7)
             .eq(1)
             .should('contain','Bio')
@@ -55,7 +55,7 @@ describe('FRUTOS OESTE TESTING', () => {
             .then(elem => {elem[0].children[0].firstChild.click()
         })
 
-        cy.get('[id="dataTable"] > tbody')
+        cy.get('table > tbody')
             .should('have.length', 6)
 
         cy.get('.navbar-nav .nav-item')
