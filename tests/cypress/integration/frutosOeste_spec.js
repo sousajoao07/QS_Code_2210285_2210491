@@ -2,10 +2,9 @@
 
 describe('FRUTOS OESTE TESTING', () => {
     const filepath = 'images/biologicos.jpg'
-
     beforeEach(() => {
-        cy.visit('http://34.140.46.213/admin')
-        cy.wait(3000)
+        cy.visit('/admin')
+        cy.wait(500)
         cy.get('.login-form .div')
             .first()
             .type('admin@email.pt')
@@ -19,11 +18,9 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.list-group-item')
             .eq(1)
             .click()
-        cy.wait(3000)
     })
 
     it('Add Category', () => {
-
         cy.get('.card-header .btn')
             .click()
 
@@ -37,35 +34,34 @@ describe('FRUTOS OESTE TESTING', () => {
             .get('.form-group .btn')
             .first()
             .click()
-
-        cy.wait(5000)
-
-        cy.get('.table > tbody')
+        cy.wait(500)
+        cy.get('table>tbody')
             .should('have.length', 7)
 
         //logout para iniciar o próximo teste
         cy.get('.navbar-nav .nav-item')
         .eq(4)
         .click()  
+
     })
 
     it('Remove Category', () => {
-        cy.wait(3000)
-        cy.get('.table > tbody')
-            .should('have.length', 7)
-            .eq(1)
-            .should('contain','Bio')
-            .find('td').eq(2)
-            .then(elem => {elem[0].children[0].firstChild.click()
+        cy.wait(500)
+        cy.get('table>tbody')
+        .should('have.length', 7)
+        .eq(1)
+        .should('contain','Bio')
+        .find('>td').eq(2)
+        .then(elem => {
+            elem[0].children[0].firstChild.click()
         })
-
-        cy.wait(3000)
-
-        cy.get('.table > tbody')
-            .should('have.length', 6)
+        cy.wait(500)
+        cy.get('table>tbody')
+        .should('have.length', 6)
 
         cy.get('.navbar-nav .nav-item')
-            .eq(4)
-            .click()
+        .eq(4)
+        .click()  
+        
     })
 })
