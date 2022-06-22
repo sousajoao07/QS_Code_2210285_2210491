@@ -3,7 +3,7 @@
 describe('FRUTOS OESTE TESTING', () => {
     const filepath = 'images/biologicos.jpg'
     beforeEach(() => {
-        cy.visit('/admin')
+        cy.visit('http://34.140.46.213/admin')
         cy.wait(500)
         cy.get('.login-form .div')
             .first()
@@ -35,7 +35,7 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .click()
         cy.wait(500)
-        cy.get('table>tbody')
+        cy.get('.table > tbody')
             .should('have.length', 7)
 
         //logout para iniciar o próximo teste
@@ -47,7 +47,7 @@ describe('FRUTOS OESTE TESTING', () => {
 
     it('Remove Category', () => {
         cy.wait(500)
-        cy.get('table>tbody')
+        cy.get('.table > tbody')
         .should('have.length', 7)
         .eq(1)
         .should('contain','Bio')
@@ -56,7 +56,7 @@ describe('FRUTOS OESTE TESTING', () => {
             elem[0].children[0].firstChild.click()
         })
         cy.wait(500)
-        cy.get('table>tbody')
+        cy.get('.table > tbody')
         .should('have.length', 6)
 
         cy.get('.navbar-nav .nav-item')
