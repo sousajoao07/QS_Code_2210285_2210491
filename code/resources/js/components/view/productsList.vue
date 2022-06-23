@@ -181,7 +181,7 @@ export default {
         this.dt = $("#table-products").DataTable({
           deferRender: true,
           responsive: true,
-          order: [[0, "asc"]],
+          order: [[0, "desc"]],
           pagingType: "full_numbers",
           lengthMenu: [
             [15, 25, 50, -1],

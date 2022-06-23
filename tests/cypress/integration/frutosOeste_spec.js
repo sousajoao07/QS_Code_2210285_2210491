@@ -8,17 +8,17 @@ describe('FRUTOS OESTE TESTING', () => {
 
     beforeEach(() => {
         cy.visit('http://34.140.46.213/admin')
- 
+
         cy.get('.login-form .div')
             .first()
             .type('admin@email.pt')
             .next()
             .type('123456\r')
             .wait(3000)
-            
+
         cy.get('.navbar-nav .nav-item')
             .eq(3)
-            .click()       
+            .click()
     })
 
     //////////////////ADD CATEGORY////////////////////
@@ -47,7 +47,7 @@ describe('FRUTOS OESTE TESTING', () => {
          cy.wait(2000)
     })
 
-    //////////////////REMOVE CATEGORY////////////////////
+    // //////////////////REMOVE CATEGORY////////////////////
 
     it('Remove Category', () => {
         cy.get('.list-group-item')
@@ -66,7 +66,7 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.wait(2000)
     })
 
-    //////////////////ADD PRODUCT////////////////////
+    ////////////////ADD PRODUCT////////////////////
 
     it('Add Product', () => {
         cy.get('.list-group-item')
@@ -83,7 +83,7 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.form-control')
             .eq(1)
             .type('100% Biologico')
-        
+
         cy.get('#categoryId')
             .select('Aperitivos')
 
@@ -95,25 +95,30 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.form-group .btn')
             .first()
             .click()
-        
+
         cy.wait(2000)
     })
 
-    //////////////////REMOVE PRODUCT////////////////////
+    //////////////////SEARCH PRODUCT AND REMOVE////////////////////
 
-    it('Remove Product', () => {
+    it('Search and Remove Product', () => {
         cy.get('.list-group-item')
             .eq(2)
             .click()
             .wait(2000)
 
-        cy.get('.table > tbody')
+        cy.get('#table-products_filter > label > input')
+            .type('tremoco')
+
+        cy.get('#table-products > tbody > tr')
             .eq(0)
-            .should('contain','Tremoco')
+            .should('contain', 'Tremoco')
             .find('>td').eq(4)
             .then(elem => {
                 elem[0].children[0].firstChild.click()
-        })
+            })
+
+        cy.wait(2000)
 
         cy.get('.navbar-nav .nav-item')
             .eq(4)
