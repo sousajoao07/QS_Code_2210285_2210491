@@ -44,10 +44,7 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .click()
 
-        //logout para iniciar o próximo teste
-        cy.get('.navbar-nav .nav-item')
-        .eq(4)
-        .click()
+         cy.wait(2000)
     })
 
     //////////////////REMOVE CATEGORY////////////////////
@@ -56,6 +53,7 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.list-group-item')
             .eq(1)
             .click()
+            .wait(2000)  
 
         cy.get('.table > tbody')
             .eq(1)
@@ -65,9 +63,7 @@ describe('FRUTOS OESTE TESTING', () => {
                 elem[0].children[0].firstChild.click()
         })
 
-        cy.get('.navbar-nav .nav-item')
-            .eq(4)
-            .click()
+        cy.wait(2000)
     })
 
     //////////////////ADD PRODUCT////////////////////
@@ -76,6 +72,7 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.list-group-item')
             .eq(2)
             .click()
+            .wait(2000)
 
         cy.get('.card-header .btn')
             .click()
@@ -93,16 +90,13 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.form-control')
             .get('input[type="file"]')
             .attachFile(filepathProduct)
-            .wait(3000)
+            .wait(2000)
 
         cy.get('.form-group .btn')
             .first()
             .click()
-
-        //logout para iniciar o próximo teste
-        cy.get('.navbar-nav .nav-item')
-        .eq(4)
-        .click()
+        
+        cy.wait(2000)
     })
 
     //////////////////REMOVE PRODUCT////////////////////
@@ -111,6 +105,7 @@ describe('FRUTOS OESTE TESTING', () => {
         cy.get('.list-group-item')
             .eq(2)
             .click()
+            .wait(2000)
 
         cy.get('.table > tbody')
             .eq(0)
