@@ -44,9 +44,6 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .click()
 
-        cy.get('.table > tbody')
-            .should('have.length', 7)
-
         //logout para iniciar o próximo teste
         cy.get('.navbar-nav .nav-item')
         .eq(4)
@@ -61,16 +58,12 @@ describe('FRUTOS OESTE TESTING', () => {
             .click()
 
         cy.get('.table > tbody')
-            .should('have.length', 7)
             .eq(1)
             .should('contain','Bio')
             .find('>td').eq(2)
             .then(elem => {
                 elem[0].children[0].firstChild.click()
         })
-   
-        cy.get('.table > tbody')
-            .should('have.length', 6)
 
         cy.get('.navbar-nav .nav-item')
             .eq(4)
@@ -106,9 +99,6 @@ describe('FRUTOS OESTE TESTING', () => {
             .first()
             .click()
 
-        cy.get('.table > tbody')
-            .should('have.length', 1)
-
         //logout para iniciar o próximo teste
         cy.get('.navbar-nav .nav-item')
         .eq(4)
@@ -123,16 +113,12 @@ describe('FRUTOS OESTE TESTING', () => {
             .click()
 
         cy.get('.table > tbody')
-            .should('have.length', 1)
             .eq(0)
             .should('contain','Tremoco')
             .find('>td').eq(4)
             .then(elem => {
                 elem[0].children[0].firstChild.click()
         })
-   
-        cy.get('.table > tbody')
-            .should('have.length', 0)
 
         cy.get('.navbar-nav .nav-item')
             .eq(4)
