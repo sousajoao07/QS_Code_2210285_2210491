@@ -20,6 +20,7 @@ pipeline{
                                 cd /var/www/frutos/code
                                 npm install
                                 composer install
+                                php artisan storage:link
                                 npm run prod ''', 
                                 execTimeout: 120000, 
                                 flatten: false, 
@@ -82,6 +83,7 @@ pipeline{
                                 cd /var/www/frutos/code
                                 npm install
                                 composer install
+                                php artisan storage:link
                                 npm run prod ''', 
                                 execTimeout: 120000, 
                                 flatten: false, 
