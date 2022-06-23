@@ -168,7 +168,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/joaosousa/Desktop/QS/QS_Code_2210285_2210491/code/resources/assets/js/scripts.js */"./resources/assets/js/scripts.js");
+module.exports = __webpack_require__(/*! C:\QS\Projeto\QS_Code_2210285_2210491\code\resources\assets\js\scripts.js */"./resources/assets/js/scripts.js");
 
 
 /***/ })

@@ -5,6 +5,9 @@ import Toasted from 'vue-toasted';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import Vuelidate from 'vuelidate';
+import { DataTable } from "datatables.net";
+
+require('datatables.net-dt/css/jquery.dataTables.min.css');
 
 window.Vue = require('vue');
 Vue.use(VueRouter);
@@ -75,6 +78,7 @@ const notFound = Vue.component('notFound', NotFoundComponent);
 
 
 import store from '../store/store.js';
+import Vue from 'vue';
 
 // // Para manter o utilizador logado depois de refrescar a pagina
 store.state.user = store.getters.getAuthUser;
@@ -222,5 +226,6 @@ router.beforeEach((to,from,next)=>{
 const app = new Vue({
    router,
    store,
+   DataTable,
    el: '#app',
 });
